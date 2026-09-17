@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>Employee Leave Management System</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard">
+
+        <div class="welcome-card">
+            <h2>Welcome, <span id="employeeName">Employee</span> 👋</h2>
+            <p>Manage your leave applications from here.</p>
+        </div>
+
+        <section class="card">
+            <h2>Apply for Leave</h2>
+
+            <form id="leaveForm">
+                <label for="leaveType">Leave Type</label>
+                <select id="leaveType" required>
+                    <option value="">Select Leave Type</option>
+                    <option value="Casual Leave">Casual Leave</option>
+                    <option value="Sick Leave">Sick Leave</option>
+                    <option value="Earned Leave">Earned Leave</option>
+                    <option value="Emergency Leave">Emergency Leave</option>
+                </select><br>
+
+                <label for="fromDate">From Date</label>
+                <input type="date" id="fromDate" required><br>
+
+                <label for="toDate">To Date</label>
+                <input type="date" id="toDate" required><br>
+                 
+                <label for="reason">Reason</label>
+                <textarea id="reason" rows="4"
+                    placeholder="Enter reason for leave" required></textarea><br>
+
+                <button type="submit">Apply Leave</button>
+
+                <p id="leaveMessage"></p>
+     
+            </form>
+              
+        </section>
+
+        <section class="card">
+            <h2>My Leave Applications</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Leave Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeLeaveTable">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

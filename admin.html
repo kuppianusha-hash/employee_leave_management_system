@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>Admin Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard">
+
+        <div class="welcome-card">
+            <h2>Welcome, Admin 👨‍💼</h2>
+            <p>Manage employee leave applications.</p>
+        </div>
+
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <h3>Total Applications</h3>
+                <p id="totalLeaves">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending</h3>
+                <p id="pendingLeaves">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Approved</h3>
+                <p id="approvedLeaves">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Rejected</h3>
+                <p id="rejectedLeaves">0</p>
+            </div>
+
+        </div>
+
+        <section class="card">
+
+            <h2>Leave Applications</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="adminLeaveTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

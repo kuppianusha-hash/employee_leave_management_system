@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+            <h1>Employee Leave Management System</h1>
+            <p class="subtitle">Login to your account</p>
+
+            <form id="loginForm">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username" required><br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required><br>
+
+                <label for="role">Login As</label>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="employee">Employee</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <button type="submit">Login</button>
+
+                <p id="loginMessage"></p>
+            </form>
+
+            <div class="demo-info">
+                <h3>Demo Login</h3>
+                <p><b>Employee:</b> employee / 1234</p>
+                <p><b>Admin:</b> admin / admin123</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
